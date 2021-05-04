@@ -26,7 +26,6 @@ class ContactPage extends Component {
     
     render() {
         const{fetchedData} = this.state;
-        console.log('fetchedData', fetchedData);
         return (
             <Layout>
                 <h1>Loading dynamic data</h1>

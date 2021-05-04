@@ -13,7 +13,6 @@ export const query = graphql`
           childImageSharp {
             gatsbyImageData(             
               layout: CONSTRAINED
-              formats: [AUTO, WEBP, JPG, PNG]
               height: 400
               width: 400
             )
@@ -30,10 +29,11 @@ const AboutPage = (props ) => {
     return (
         <Layout>
             <h1>About Me</h1>
-            <p>I currently teach full-time on Udemy.</p>
+            
             <p><Link to="/contact">Want to work with me? Reach out.</Link></p>
             <StaticImage src="https://placekitten.com/800/600" alt="A kitten" />
 
+            <p>GatsbyImage source</p>
             <GatsbyImage image={image} alt={"hello"} />
         </Layout>
     )

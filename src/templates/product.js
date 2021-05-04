@@ -15,7 +15,6 @@ export const query = graphql`
   }
 `
 const Product = (props) => {
-    console.log('props');
     return (
         <Layout>
             <h1>{props.data.products.title}</h1>

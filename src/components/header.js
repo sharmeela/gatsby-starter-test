@@ -72,6 +72,15 @@ const Header = () => {
               Products
             </Link>
           </li>
+		  <li>
+            <Link
+              className={headerStyles.navItem}
+              activeClassName={headerStyles.activeNavItem}
+              to="/productImg"
+            >
+              Products Images
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

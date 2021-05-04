@@ -40,9 +40,9 @@ module.exports = {
         {
           resolve: `gatsby-plugin-remote-images`,
           options: {
-          nodeType: 'ProductsImages', // Created Node type name
-          imagePath: 'url', // The image url name in test node type
+            nodeType: 'ProductsImages', // Created Node type name
+           imagePath: 'url', // The image url name in test node type
           }
-      }
+       }
     ]
 }

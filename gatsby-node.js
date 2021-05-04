@@ -1,21 +1,6 @@
 const path = require('path');
-const fetch = require('isomorphic-fetch');
-const axios = require('axios');
 
 const { createRemoteFileNode } = require(`gatsby-source-filesystem`);
-const { parse } = require('path');
-
-module.exports.sourceNodes = async ({ actions, createNodeId, node, store, cache }) => {
-    const { createNode, createNodeField } = actions;
-    const data = await fetch('https://jsonplaceholder.typicode.com/photos');
-    const parsed = await data.json();
-
-    //console.log('imgdata', parsed);
-    
-
-    
-
-},
 
 module.exports.onCreateNode = ({ node, actions }) => {
     const { createNodeField } = actions
