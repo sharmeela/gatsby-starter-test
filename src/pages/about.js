@@ -1,9 +1,8 @@
 import React from 'react'
 import { Link,  graphql, useStaticQuery } from 'gatsby'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
-import Img from 'gatsby-image'
 import Layout from "../components/layout";
-
+/*
 export const query = graphql`
     query {
       productsImages {
@@ -21,20 +20,20 @@ export const query = graphql`
       }
     }
 `
-
+*/
 const AboutPage = (props ) => {
-    console.log('data', props.data.productsImages);
-    const image = getImage(props.data.productsImages.localImage);
-    console.log('image', image);
+    //console.log('data', props.data.productsImages);
+    ////const image = getImage(props.data.productsImages.localImage);
+    //console.log('image', image);
     return (
         <Layout>
             <h1>About Me</h1>
             
-            <p><Link to="/contact">Want to work with me? Reach out.</Link></p>
+            //<p><Link to="/contact">Want to work with me? Reach out.</Link></p>
             <StaticImage src="https://placekitten.com/800/600" alt="A kitten" />
 
             <p>GatsbyImage source</p>
-            <GatsbyImage image={image} alt={"hello"} />
+			{/* <GatsbyImage image={image} alt={"hello"} />*/}
         </Layout>
     )
 }
