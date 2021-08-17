@@ -27,13 +27,22 @@ const Header = () => {
       </h1>
       <nav>
         <ul className={headerStyles.navList}>
-          <li>
+			<li>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
               to="/"
             >
               Home
+            </Link>
+          </li>
+		  {/*<li>
+            <Link
+              className={headerStyles.navItem}
+              activeClassName={headerStyles.activeNavItem}
+              to="/search"
+            >
+              Search
             </Link>
           </li>
           <li>
@@ -62,8 +71,8 @@ const Header = () => {
             >
               Contact
             </Link>
-          </li>
-          <li>
+			</li>*/}
+          {/*<li>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
@@ -72,13 +81,14 @@ const Header = () => {
               Products
             </Link>
           </li>
-		  <li>
+		  */}
+          <li>
             <Link
               className={headerStyles.navItem}
               activeClassName={headerStyles.activeNavItem}
               to="/productImg"
             >
-              Products Images
+              Products Img
             </Link>
           </li>
         </ul>

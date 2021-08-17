@@ -3,7 +3,7 @@ import { Link, graphql, useStaticQuery } from 'gatsby';
 import Layout from '../components/layout';
 
 const BlogPage = () => {
-    const data = useStaticQuery(graphql`
+    /*const data = useStaticQuery(graphql`
         query{
             allMarkdownRemark{
                 edges{
@@ -19,13 +19,13 @@ const BlogPage = () => {
                 }
             }
         }
-      `)
+      `)*/
 
     return (
         <Layout>
             <h1>Blog</h1>
             <ol>
-                {data.allMarkdownRemark.edges.map((edge, index) => {
+                {/*data.allMarkdownRemark.edges.map((edge, index) => {
                     return (
                             <Link to={`/blog/${edge.node.fields.slug}`}>
                             <li key={index}>
@@ -33,7 +33,7 @@ const BlogPage = () => {
                                 <p>{edge.node.frontmatter.date}</p>
                             </li></Link>
                     )
-                })}
+                })*/}
             </ol>
         </Layout>
     )

@@ -3,43 +3,39 @@ import { Link,  graphql, useStaticQuery } from 'gatsby'
 import Img from 'gatsby-image'
 import { StaticImage, GatsbyImage, getImage } from "gatsby-plugin-image"
 import Layout from "../components/layout";
-
+/*
 export const query = graphql`
-  query {
-    productsImages {
-      localImage {
-        childImageSharp {
-          fluid(maxWidth: 300) {
-            ...GatsbyImageSharpFluid_withWebp_noBase64
-          }
-        }
-      }
-    }
-    allProductsImages {
-      edges {
-        node {
-          localImage {
-            childImageSharp {
-              gatsbyImageData(layout: FULL_WIDTH, formats:[AUTO, WEBP])
-            }
-          }
-        }
-      }
-    }
+  query {    
+    allProductsByApi {
+		edges {
+		  node {
+			media {
+			  all {
+				imageFile {
+				  childrenImageSharp {
+					gatsbyImageData(layout: CONSTRAINED)
+				  }
+				}
+			  }
+			}
+		  }
+		}
+	  }
 
   }
 `
+*/
 
 const ImgPage = (props ) => {
+	//console.log('props.data', props.data.allProductsByApi);
         return (
         <Layout>
-            <h1>About Me</h1>
-            <p>Fluid source</p>   
+		{/*<p>Fluid source</p>   
             <Img fluid={props.data.productsImages.localImage.childImageSharp.fluid} /> 
            <br></br>
-
+		*/}
             <ol>
-                {props.data.allProductsImages.edges.map((edge, index) => {
+                {/*props.data.allProductsImages.edges.map((edge, index) => {
                     console.log('edge', edge);
                     const imagePath = getImage(edge.node.localImage);
                     return (                            
@@ -47,7 +43,7 @@ const ImgPage = (props ) => {
                                  <GatsbyImage image={imagePath} alt={"hello"} />    
                             </li>
                     )
-                })}
+                })*/}
             </ol>
 
         </Layout>
